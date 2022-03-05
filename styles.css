@@ -1,0 +1,72 @@
+*{
+  box-sizing: border-box;
+}
+body{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+overflow: hidden;
+transition: background ease-in 0.3s;
+}
+body.dark{
+  background-color: #B453DA;
+}
+body.dark .fa-sun{
+  transform: rotate(360deg);
+  transition: 2s;
+}
+body.dark .label .fa-moon{
+  transform: rotate(0);
+  transition: 1s;
+}
+body .fa-moon{
+  transform: rotate(360deg);
+  transition: 1s;
+}
+
+body.dark div.ball{
+  background-color: #B453DA;
+  transition: ease-in 0.3s;
+}
+body.dark label{
+  background-color: white;
+  transition: ease-in 0.3s;
+}
+.checkbox{
+  visibility: hidden;
+}
+.checkbox:checked + .label .ball{
+  transform: translateX(48px);
+}
+.label{
+  display: flex;
+  height: 52px;
+  width: 100px;
+  border-radius: 52px;
+  background-color: #B453DA;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+}
+.label:hover{
+  cursor: pointer;
+}
+.ball{
+  top: 2px;
+  left: 2px;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  transition: ease-in 0.3s;
+}
+.fa-sun{
+  color: orange;
+}
+.fa-moon{
+  color: orange;
+  padding-right: 1px;
+}
